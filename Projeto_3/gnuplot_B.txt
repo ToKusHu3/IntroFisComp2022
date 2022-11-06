@@ -1,0 +1,11 @@
+set enfcoding utf8
+set term pdfcairo color enhanced
+set output "grafB.pdf"
+set title "Grafico B - Velocidade vs Tempo"
+set xlabel "tempo (s)"
+set ylabel "velocidade (m/s)"
+set key left box
+plot "velB0_out.dat" with line title "Sem arrasto", \
+"velB1_out.dat" with line title "A = 1/2", \
+"velB2_out.dat" with line title "A = 1", \
+"velB3_out.dat" with line title "A = 2"

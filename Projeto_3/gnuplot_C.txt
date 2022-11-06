@@ -1,0 +1,17 @@
+set enfcoding utf8
+set term pdfcairo color enhanced
+set output "grafC.pdf"
+set title "Angulo vs Tempo"
+set xlabel "tempo (s)"
+set ylabel "angulo theta (rad)"
+set key left box
+plot "exactsoluction_out.dat" with dots title "Solucao exata", \
+"exerC1_out.dat" with line title "Euler", \
+"exerC2_out.dat" with line title "Euler-Cromer"
+
+set title "Energia vs Tempo"
+set xlabel "tempo (s)"
+set ylabel "energia (J)"
+set key left box
+plot "energiaC1_out.dat" with line title "Euler", \
+"energiaC2_out.dat" with line title "Euler-Cromer"
