@@ -1,0 +1,11 @@
+set enfcoding utf8
+set term pdfcairo color enhanced
+set output "decai.pdf"
+set grid
+set title "Grafico do Decaimento Atomico"
+set xlabel "tempo (anos)"
+set ylabel "Numero de atomos restantes"
+set key right box
+plot 5000*exp(-0.7*x) with lines lt 1 lc rgb '#fc190b' lw 1 title "Solucao Analitica", \
+"decai1_out" with lines lt 2 lc rgb '#337000' lw 2 dt 2 title "dt = 0.01", \
+"decai2_out" with lines lt 3 lc rgb '#4e64cf' lw 2 dt 2 title "dt = 0.2"
